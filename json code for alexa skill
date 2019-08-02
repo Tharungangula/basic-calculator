@@ -1,0 +1,144 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "calci",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "basicfunctions",
+                    "slots": [
+                        {
+                            "name": "operator",
+                            "type": "operatorslottypes"
+                        },
+                        {
+                            "name": "input",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "input_",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "ok tell me what is {input} {operator} {input_}",
+                        "{operator} {input} from {input_}",
+                        "please {operator} {input} and {input_}",
+                        "can you {operator} {input} and {input_}",
+                        "{operator} {input} and {input_}"
+                    ]
+                },
+                {
+                    "name": "secondfunctions",
+                    "slots": [
+                        {
+                            "name": "op",
+                            "type": "opslottypes"
+                        },
+                        {
+                            "name": "inpu",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{op} {inpu}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "operatorslottypes",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "sub"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "by"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "divide"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "subtract"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "multiply"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "add"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "opslottypes",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "dividedby",
+                                "synonyms": [
+                                    "divide by"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "into",
+                                "synonyms": [
+                                    "multiply by"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "minus",
+                                "synonyms": [
+                                    "sub"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plus",
+                                "synonyms": [
+                                    "add"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
