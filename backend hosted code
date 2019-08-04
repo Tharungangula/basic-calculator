@@ -61,19 +61,19 @@ const secondfunctionsIntentHandler = {
         var f = handlerInput.requestEnvelope.request.intent.slots.op.value
         var e = handlerInput.requestEnvelope.request.intent.slots.inpu.value 
         e = parseInt(e)
-        if(f === 'plus'||'add'){
+        if(f === 'add'){
             d = d+e;
             sessionAttributes.speechText = d
         }
-        if(f === 'into'||'multiply by'){
+        if(f === 'multiply by'){
              d = d*e
              sessionAttributes.speechText = d
         }
-    if(f === 'dividedby'||'by'){
+    if(f === 'dividedby'){
         d = d/e
         sessionAttributes.speechText = d
     } 
-    if(f === 'minus'||'sub'){
+    if(f === 'sub'){
         d = d-e
         sessionAttributes.speechText = d
     }
